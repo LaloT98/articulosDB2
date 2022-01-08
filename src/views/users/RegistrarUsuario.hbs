@@ -1,0 +1,343 @@
+<div class="row">
+  <div class="col-md-9 mx-auto text-center">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="h4">
+          Registro de Cuenta
+        </h1>
+      </div>
+      <img class=" mx-auto d-block logo2 m-4" src="/img/logo2.png" alt="Logo">
+      <div class="card-body">
+        <form action="/users/registrar" method="POST">
+
+          <div class="form-group Espacio">
+            <h5>Datos del Usuario</h5>
+          </div>
+          {{!--------Tipo de Usuario---------}}
+          <div class="form-group">
+            <select class="custom-select" name="tipo" id="validationDefault" value="{{tipo}}" required autofocus>
+              <option selected disabled>Tipo de Usuario</option>
+              <option>USUARIO</option>
+              <option>ADMINISTRADOR</option>
+            </select>
+          </div>
+          {{!--------CURP---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="CURP" placeholder="CURP"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{CURP}}" required>
+          </div>
+          {{!--------CVU---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="CVU" placeholder="CVU"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{CVU}}" required>
+          </div>
+          {{!--------RFC---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="RFC" placeholder="RFC"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{RFC}}" required>
+          </div>
+          {{!--------nombre---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="nombre" placeholder="Nombre Completo"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{nombre}}" required>
+          </div>
+          {{!--------apellidos---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="apellidos" placeholder="Apellidos"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{apellidos}}" required>
+          </div>
+          {{!--------direccion---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="direccion" placeholder="Direccion"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{direccion}}" required>
+          </div>
+          {{!--------telefono--------}}
+          <div class="form-group">
+            <input type="number" class="form-control" name="telefono" placeholder="Telefono" min="0000000000"
+              max="9999999999" value="{{telefono}}" required>
+          </div>
+          {{!--------lugarNacimiento--------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="lugarNacimiento"
+              placeholder="Lugar Nacimiento" onKeyUp="javascript:this.value=this.value.toUpperCase()"
+              value="{{lugarNacimiento}}" required>
+          </div>
+          {{!--------edad--------}}
+          <div class="form-group">
+            <input type="number" class="form-control" name="edad" placeholder="Edad"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{edad}}" required>
+          </div>
+          {{!--------licenciatura--------}}
+          <div class="form-group">
+            <select class="custom-select form-control" name="licenciatura" id="validationDefault"
+              value="{{licenciatura}}" required>
+              <option selected disabled>INGENIERÍA</option>
+              <option> INGENIERÍA ADMINISTRADOR DE SISTEMAS </option>
+              <option> INGENIERÍA AEROESPACIAL </option>
+              <option> INGENIERÍA AERONÁUTICA </option>
+              <option> INGENIERÍA AGROINDUSTRIAL </option>
+              <option> INGENIERÍA AMBIENTAL </option>
+              <option> INGENIERÍA BIOMÉDICA </option>
+              <option> INGENIERÍA BIÓNICA </option>
+              <option> INGENIERÍA BIOQUÍMICA </option>
+              <option> INGENIERÍA BIOTECNOLOGÍA </option>
+              <option> INGENIERÍA CIVIL </option>
+              <option> INGENIERÍA COMERCIAL </option>
+              <option> INGENIERÍA DE ALIMENTOS </option>
+              <option> INGENIERÍA DE MINAS Y METALURGIA </option>
+              <option> INGENIERÍA DE SOFTWARE </option>
+              <option> INGENIERÍA ELÉCTRICA </option>
+              <option> INGENIERÍA ELÉCTRICA Y ELECTRÓNICA </option>
+              <option> INGENIERÍA ELECTRÓNICA </option>
+              <option> INGENIERÍA EN ARQUITECTURA </option>
+              <option> INGENIERÍA EN COMPUTACIÓN </option>
+              <option> INGENIERÍA EN COMUNICACIONES Y ELECTRÓNICA </option>
+              <option> INGENIERÍA EN CONTROL Y AUTOMATIZACIÓN </option>
+              <option> INGENIERÍA EN ELECTRÓNICA Y AUTOMATIZACIÓN </option>
+              <option> INGENIERÍA EN ELECTRÓNICA Y COMUNICACIONES </option>
+              <option> INGENIERÍA EN ENERGÍA </option>
+              <option> INGENIERÍA EN ENERGÍAS RENOVABLES </option>
+              <option> INGENIERÍA EN INFORMÁTICA </option>
+              <option> INGENIERÍA EN IRRIGACIÓN </option>
+              <option> INGENIERÍA EN MANUFACTURA </option>
+              <option> INGENIERÍA EN MATERIALES </option>
+              <option> INGENIERÍA EN MECATRÓNICA </option>
+              <option> INGENIERÍA EN MECATRÓNICA Y PRODUCCIÓN </option>
+              <option> INGENIERÍA EN METALURGIA Y MATERIALES </option>
+              <option> INGENIERÍA EN NEGOCIOS </option>
+              <option> INGENIERÍA EN ROBÓTICA INDUSTRIAL </option>
+              <option> INGENIERÍA EN SEMICONDUCTORES Y MICROELECTRÓNICA </option>
+              <option> INGENIERÍA EN SISTEMAS AMBIENTALES </option>
+              <option> INGENIERÍA EN SISTEMAS AUTOMOTRICES </option>
+              <option> INGENIERÍA EN SISTEMAS COMPUTACIONALES </option>
+              <option> INGENIERÍA EN SISTEMAS Y TECNOLOGÍAS DE LA INFORMACIÓN </option>
+              <option> INGENIERÍA EN TECNOLOGÍA DE SOFTWARE </option>
+              <option> INGENIERÍA EN TECNOLOGÍAS DE CÓMPUTO Y TELECOMUNICACIONES </option>
+              <option> INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN Y TELECOMUNICACIONES </option>
+              <option> INGENIERÍA EN TRANSPORTE </option>
+              <option> INGENIERÍA FARMACÉUTICA </option>
+              <option> INGENIERÍA FÍSICA </option>
+              <option> INGENIERÍA GEOFÍSICA </option>
+              <option> INGENIERÍA GEOLÓGICA </option>
+              <option> INGENIERÍA GEOMÁTICA </option>
+              <option> INGENIERÍA INDUSTRIAL </option>
+              <option> INGENIERÍA MATEMÁTICA </option>
+              <option> INGENIERÍA MECÁNICA </option>
+              <option> INGENIERÍA MECÁNICO ADMINISTRADOR </option>
+              <option> INGENIERÍA MECÁNICO ELECTRICISTA </option>
+              <option> INGENIERÍA PETROLERA </option>
+              <option> INGENIERÍA QUÍMICA </option>
+              <option> INGENIERÍA QUÍMICA INDUSTRIAL </option>
+              <option> INGENIERÍA QUÍMICA PETROLERA </option>
+              <option> INGENIERÍA SISTEMAS COMPUTACIONALES EN HARDWARE </option>
+              <option> INGENIERÍA SISTEMAS TOPOGRÁFICOS </option>
+              <option> INGENIERÍA TECNOLOGÍA DE PROCESOS </option>
+              <option> INGENIERÍA TELECOMUNICACIONES </option>
+              <option> INGENIERÍA TELEMÁTICA </option>
+              <option> INGENIERÍA TEXTIL </option>
+              <option> INGENIERÍA TOPOGRÁFICA Y FOTOGRAMETRÍA </option>
+              <option> INGENIERÍA TOPÓGRAFO Y GEODESTA </option>
+              <option> ---OTRA--- </option>
+            </select>
+          </div>
+          {{!--------maestria--------}}
+          <div class="form-group">
+            <select class="custom-select form-control" name="maestria" id="validationDefault" value="{{maestria}}"
+              required>
+              <option selected disabled>MAESTRÍA</option>
+              <option> MAESTRÍA CIENCIAS FÍSICAS </option>
+              <option> MAESTRÍA EN ADMINISTRACIÓN </option>
+              <option> MAESTRÍA EN ALTA DIRECCIÓN </option>
+              <option> MAESTRÍA EN ANTROPOLOGÍA </option>
+              <option> MAESTRÍA EN ARQUITECTURA </option>
+              <option> MAESTRÍA EN ARTES VISUALES </option>
+              <option> MAESTRÍA EN ASTROFÍSICA </option>
+              <option> MAESTRÍA EN AUDITORÍA </option>
+              <option> MAESTRÍA EN BIBLIOTECOLOGÍA Y ESTUDIOS DE LA INFORMACIÓN </option>
+              <option> MAESTRÍA EN CIENCIA E INGENIERÍA DE LA COMPUTACIÓN </option>
+              <option> MAESTRÍA EN CIENCIA E INGENIERÍA DE MATERIALES </option>
+              <option> MAESTRÍA EN CIENCIAS (NEUROBIOLOGÍA) </option>
+              <option> MAESTRÍA EN CIENCIAS BIOLÓGICAS </option>
+              <option> MAESTRÍA EN CIENCIAS BIOQUÍMICAS </option>
+              <option> MAESTRÍA EN CIENCIAS DE LA PRODUCCIÓN Y DE LA SALUD ANIMAL </option>
+              <option> MAESTRÍA EN CIENCIAS DE LA SOSTENIBILIDAD </option>
+              <option> MAESTRÍA EN CIENCIAS DE LA TIERRA </option>
+              <option> MAESTRÍA EN CIENCIAS DEL MAR Y LIMNOLOGÍA </option>
+              <option> MAESTRÍA EN CIENCIAS MATEMÁTICAS </option>
+              <option> MAESTRÍA EN CIENCIAS MÉDICAS, ODONTOLÓGICAS Y DE LA SALUD </option>
+              <option> MAESTRÍA EN CIENCIAS QUÍMICAS </option>
+              <option> MAESTRÍA EN CINE DOCUMENTAL </option>
+              <option> MAESTRÍA EN COMUNICACIÓN </option>
+              <option> MAESTRÍA EN DEMOGRAFÍA SOCIAL </option>
+              <option> MAESTRÍA EN DERECHO </option>
+              <option> MAESTRÍA EN DIRECCIÓN E INGENIERÍA EN SITIOS WEB </option>
+              <option> MAESTRÍA EN DIRECCIÓN Y OPERACIONES DE CALIDAD </option>
+              <option> MAESTRÍA EN DISEÑO INDUSTRIAL </option>
+              <option> MAESTRÍA EN DISEÑO Y COMUNICACIÓN VISUAL </option>
+              <option> MAESTRÍA EN DISEÑO Y GESTIÓN DE PROYECTOS TECNOLÓGICOS </option>
+              <option> MAESTRÍA EN DOCENCIA EN ARTES Y DISEÑO </option>
+              <option> MAESTRÍA EN DOCENCIA PARA LA EDUCACIÓN MEDIA SUPERIOR (MADEMS) </option>
+              <option> MAESTRÍA EN ECONOMÍA </option>
+              <option> MAESTRÍA EN EDUCACIÓN </option>
+              <option> MAESTRÍA EN ENFERMERÍA </option>
+              <option> MAESTRÍA EN ESTUDIOS EN RELACIONES INTERNACIONALES </option>
+              <option> MAESTRÍA EN ESTUDIOS LATINOAMERICANOS </option>
+              <option> MAESTRÍA EN ESTUDIOS MESOAMERICANOS </option>
+              <option> MAESTRÍA EN ESTUDIOS POLÍTICOS Y SOCIALES </option>
+              <option> MAESTRÍA EN FILOSOFÍA </option>
+              <option> MAESTRÍA EN FILOSOFÍA DE LA CIENCIA </option>
+              <option> MAESTRÍA EN FINANZAS </option>
+              <option> MAESTRÍA EN GEOGRAFÍA </option>
+              <option> MAESTRÍA EN GOBIERNO Y ASUNTOS PÚBLICOS </option>
+              <option> MAESTRÍA EN HISTORIA </option>
+              <option> MAESTRÍA EN HISTORIA DEL ARTE </option>
+              <option> MAESTRÍA EN INFORMÁTICA ADMINISTRATIVA </option>
+              <option> MAESTRÍA EN INGENIERÍA </option>
+              <option> MAESTRÍA EN LETRAS </option>
+              <option> MAESTRÍA EN LINGÜÍSTICA </option>
+              <option> MAESTRÍA EN MÉXICO-ESTADOS UNIDOS </option>
+              <option> MAESTRÍA EN MÚSICA </option>
+              <option> MAESTRÍA EN PEDAGOGÍA </option>
+              <option> MAESTRÍA EN POLÍTICA CRIMINAL </option>
+              <option> MAESTRÍA EN PSICOLOGÍA </option>
+              <option> MAESTRÍA EN SEGURIDAD INFORMÁTICA </option>
+              <option> MAESTRÍA EN SISTEMAS COMPUTACIONES </option>
+              <option> MAESTRÍA EN SISTEMAS INTEGRADOS DE GESTIÓN </option>
+              <option> MAESTRÍA EN TRABAJO SOCIAL </option>
+              <option> MAESTRÍA EN URBANISMO </option>
+              <option> EN CURSO DE OBTENCION DE UNA MAESTRÍA </option>
+              <option> ---SIN MAESTRÍA--- </option>
+              <option> ---OTRA--- </option>
+            </select>
+          </div>
+          {{!--------doctorado--------}}
+          <div class="form-group">
+            <select class="custom-select form-control" name="doctorado" id="validationDefault" value="{{doctorado}}"
+              required>
+              <option selected disabled>DOCTORADO</option>
+              <option> DOCTORADO CIENCIAS FÍSICAS </option>
+              <option> DOCTORADO EN ANTROPOLOGÍA </option>
+              <option> DOCTORADO EN ARQUITECTURA </option>
+              <option> DOCTORADO EN ARTES Y DISEÑO </option>
+              <option> DOCTORADO EN ASTROFÍSICA </option>
+              <option> DOCTORADO EN BIBLIOTECOLOGÍA Y ESTUDIOS DE LA INFORMACIÓN </option>
+              <option> DOCTORADO EN CIENCIA E INGENIERÍA DE LA COMPUTACIÓN </option>
+              <option> DOCTORADO EN CIENCIA E INGENIERÍA DE MATERIALES </option>
+              <option> DOCTORADO EN CIENCIAS BIOLÓGICAS </option>
+              <option> DOCTORADO EN CIENCIAS BIOMÉDICAS </option>
+              <option> DOCTORADO EN CIENCIAS BIOQUÍMICAS </option>
+              <option> DOCTORADO EN CIENCIAS DE LA ADMINISTRACIÓN </option>
+              <option> DOCTORADO EN CIENCIAS DE LA PRODUCCIÓN Y DE LA SALUD ANIMAL </option>
+              <option> DOCTORADO EN CIENCIAS DE LA SOSTENIBILIDAD </option>
+              <option> DOCTORADO EN CIENCIAS DE LA TIERRA </option>
+              <option> DOCTORADO EN CIENCIAS DEL MAR Y LIMNOLOGÍA </option>
+              <option> DOCTORADO EN CIENCIAS MATEMÁTICAS </option>
+              <option> DOCTORADO EN CIENCIAS MÉDICAS, ODONTOLÓGICAS Y DE LA SALUD </option>
+              <option> DOCTORADO EN CIENCIAS QUÍMICAS </option>
+              <option> DOCTORADO EN DERECHO </option>
+              <option> DOCTORADO EN ECONOMÍA </option>
+              <option> DOCTORADO EN ESTUDIOS LATINOAMERICANOS </option>
+              <option> DOCTORADO EN ESTUDIOS MESOAMERICANOS </option>
+              <option> DOCTORADO EN FILOSOFÍA </option>
+              <option> DOCTORADO EN FILOSOFÍA DE LA CIENCIA </option>
+              <option> DOCTORADO EN GEOGRAFÍA </option>
+              <option> DOCTORADO EN HISTORIA </option>
+              <option> DOCTORADO EN HISTORIA DEL ARTE </option>
+              <option> DOCTORADO EN INGENIERÍA </option>
+              <option> DOCTORADO EN LETRAS </option>
+              <option> DOCTORADO EN LINGÜÍSTICA </option>
+              <option> DOCTORADO EN MÚSICA </option>
+              <option> DOCTORADO EN PEDAGOGÍA </option>
+              <option> DOCTORADO EN PSICOLOGÍA </option>
+              <option> DOCTORADO EN URBANISMO </option>
+              <option> EN CURSO DE OBTENCION DE UN DOCTORADO </option>
+              <option> ---SIN DOCTORADO--- </option>
+              <option> ---OTRA--- </option>
+            </select>
+          </div>
+          {{!--------especialidad--------}}
+          <div class="form-group">
+            <select class="custom-select form-control" name="especialidad" id="validationDefault"
+              value="{{especialidad}}" required>
+              <option selected disabled>ESPECIALIDAD</option>
+              <option> ESPECIALIDAD EN ANÁLISIS POLÍTICO </option>
+              <option> ESPECIALIDAD EN COMUNICACIÓN Y CAMPAÑAS POLÍTICAS </option>
+              <option> ESPECIALIDAD EN NEGOCIACIÓN Y GESTIÓN DE CONFLICTOS POLÍTICOS Y SOCIALES </option>
+              <option> ESPECIALIDAD EN OPINIÓN PÚBLICA </option>
+              <option> ESPECIALIDAD EN PRODUCCIÓN DE OVINOS Y CAPRINOS </option>
+              <option> ESPECIALIDAD EN SEGURIDAD PÚBLICA </option>
+              <option> ESPECIALIDAD EN VALUACIÓN RURAL </option>
+              <option> ESPECIALIDADES MÉDICAS </option>
+              <option> ESPECIALIZACIÓN EN BIOQUÍMICA CLÍNICA </option>
+              <option> ESPECIALIZACIÓN EN COSTOS EN LA CONSTRUCCIÓN </option>
+              <option> ESPECIALIZACIÓN EN ENDOPERIODONTOLOGÍA </option>
+              <option> ESPECIALIZACIÓN EN ENFERMERÍA </option>
+              <option> ESPECIALIZACIÓN EN ENFERMERÍA NEFROLÓGICA </option>
+              <option> ESPECIALIZACIÓN EN ENSEÑANZA DE ESPAÑOL COMO LENGUA EXTRANJERA </option>
+              <option> ESPECIALIZACIÓN EN ESTADÍSTICA APLICADA </option>
+              <option> ESPECIALIZACIÓN EN ESTOMATOLOGÍA DEL NIÑO Y DEL ADOLESCENTE </option>
+              <option> ESPECIALIZACIÓN EN ESTOMATOLOGÍA EN ATENCIÓN PRIMARIA </option>
+              <option> ESPECIALIZACIÓN EN FARMACIA HOSPITALARIA Y CLÍNICA </option>
+              <option> ESPECIALIZACIÓN EN FARMACIA INDUSTRIAL </option>
+              <option> ESPECIALIZACIÓN EN GEOTECNIA </option>
+              <option> ESPECIALIZACIÓN EN HISTORIA DEL ARTE </option>
+              <option> ESPECIALIZACIÓN EN INSTITUCIONES ADMINISTRATIVAS DE FINANZAS PÚBLICAS </option>
+              <option> ESPECIALIZACIÓN EN MEDICINA VETERINARIA Y ZOOTECNIA </option>
+              <option> ESPECIALIZACIÓN EN MICROSCOPÍA ELECTRÓNICA EN CIENCIAS BIOLÓGICAS </option>
+              <option> ESPECIALIZACIÓN EN ORTODONCIA </option>
+              <option> ESPECIALIZACIÓN EN PUENTES </option>
+              <option> ESPECIALIZACIÓN EN SALUD EN EL TRABAJO </option>
+              <option> ESPECIALIZACIÓN EN SISTEMAS DE CALIDAD </option>
+              <option> ESPECIALIZACIONES EN ARQUITECTURA </option>
+              <option> ESPECIALIZACIONES EN CIENCIAS DE LA ADMINISTRACIÓN </option>
+              <option> ESPECIALIZACIONES EN CIENCIAS POLÍTICAS Y SOCIALES </option>
+              <option> ESPECIALIZACIONES EN DERECHO </option>
+              <option> ESPECIALIZACIONES EN ECONOMÍA </option>
+              <option> ESPECIALIZACIONES EN INGENIERÍA </option>
+              <option> ESPECIALIZACIONES EN PSICOLOGÍA </option>
+              <option> ESPECIALIZACIONES EN TRABAJO SOCIAL </option>
+              <option> ESPECIALIZACIONES ODONTOLÓGICAS </option>
+              <option> EN CURSO DE OBTENCION DE ESPECIALIDAD </option>
+              <option> ---SIN ESPECIALIDAD--- </option>
+              <option> ---OTRA--- </option>
+            </select>
+          </div>
+
+
+          {{!--------matricula---------}}
+          <div class="form-group">
+            <input type="text-transform:uppercase" class="form-control" name="matricula" placeholder="Matricula"
+              onKeyUp="javascript:this.value=this.value.toUpperCase()" value="{{matricula}}">
+          </div>
+          {{!--------Contrasena---------}}
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Contraseña" value="{{password}}"
+              required>
+          </div>
+          {{!--------Confirmar Contrasena---------}}
+          <div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar contraseña"
+              value="{{confirm_password}}" required>
+          </div>
+
+          {{!-- Validacion de los datos --}}
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+            <label class="form-check-label" for="invalidCheck3">
+              aceptar los terminos y condiciones
+            </label>
+          </div>
+
+
+          <button class="btn btn-primary btn-block">
+            Registrar
+          </button>
+        </form>
+        {{!-- <form>
+          <h6>¿Ya estas registrado?</h6>
+          <a href="/users/ingresar" class="btn btn-primary btn-sm">Ingresar</a>
+        </form> --}}
+      </div>
+    </div>
+  </div>
+</div>
