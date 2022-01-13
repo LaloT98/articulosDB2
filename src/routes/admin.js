@@ -44,6 +44,7 @@ router.get('/menu/reporte/usuarios', isAuthenticated, async (req, res) => {
         res.render("admin/menuUsuarios", { TodosUsuarios });
     }
 });
+
 router.get('/menu/reporte/articulos', isAuthenticated, async (req, res) => {
     const usuario = await User.findById(req.user.id).lean()
     const TodosArticulos = await Articulos.find().sort({ user: 'desc', tipo: 'desc', date: 'desc' }).lean();
@@ -54,6 +55,7 @@ router.get('/menu/reporte/articulos', isAuthenticated, async (req, res) => {
         res.render("admin/menuArticulos", { TodosArticulos });
     }
 });
+
 router.get('/menu/reporte/todo', isAuthenticated, async (req, res) => {
     const usuario = await User.findById(req.user.id).lean()
     const TodosArticulos = await Articulos.find().sort({ user: 'desc', tipo: 'desc', date: 'desc' }).lean();

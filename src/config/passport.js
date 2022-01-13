@@ -17,13 +17,7 @@ passport.use("Ingreso", new LocalStrategy(
         if (user) {
             const contrasena = await User.findOne({ matricula: matricula, password: password });
             if (contrasena) {
-                const Tipo = await User.findOne({ matricula: matricula, password: password, tipo: req.body.tipo });
-                if (Tipo) { return done(null, user); }
-                else {
-                    return done(
-                        null, false, { message: "tipo de usuario Incorrecto" });
-                }
-
+                return done(null, user); 
             }
             else { return done(null, false, { message: "Contraseña Incorrecta" }); }
         }
