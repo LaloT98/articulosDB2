@@ -18,12 +18,16 @@
 </head>
 
 <body>
-    {{>navegation}}
+    {{>navegacion}}
     <main class="container p-4">
         {{>messages}}
         {{>errors}}
         {{{ body }}}
     </main>
+    
+    <footer class="bgDark">
+        {{>footer}}
+    </footer>
 
 
     {{!-- font awesome --}}
