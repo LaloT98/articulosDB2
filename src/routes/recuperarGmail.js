@@ -35,7 +35,7 @@ router.post("/envia-correo", async(req, res) => {
     </ul>
 
     <h4> si deseas cambiar la contraseña, deberas ingresar con tu cuenta y cambiar dentro de la plataforma </h4>
-    <a>https://app-articulosdb.herokuapp.com/</a>
+    https://app-articulosdb.herokuapp.com
 
     <h4>Estamos trabajando para mejorar la plataforma web, por tu comprension gracias </h4>
 
