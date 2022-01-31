@@ -27,7 +27,7 @@ router.post("/envia-correo", async(req, res) => {
     
 
     <ul>
-        <li> Correo         : ${usuario.correo} </li>
+        <li> matricula      : ${usuario.matricula} </li>
         <li> Contraseña     : ${usuario.password} </li>
         <li> Tipo de Usuaio : ${usuario.tipo} </li>
     </ul>
