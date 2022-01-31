@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
+const config = require("./config.js")
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://linux:LALO14629@cluster0.pdafw.mongodb.net/DB_articulos?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGODB_URI || config.mongoID)
     .then(db => console.log('Base de datos Conectada'))
     .catch(err => console.error(err));
-
-   
-
-
-
-    

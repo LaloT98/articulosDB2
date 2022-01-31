@@ -23,14 +23,15 @@ app.engine(".hbs", exphbs.engine({
     layoutsDir: path.join(app.get("views"), "layouts"),
     partialsDir: path.join(app.get("views"), "partials"),
     extname: ".hbs",
-})
-);
+}));
 app.set("view engine", ".hbs");
 
 //MIDDLEWARES
+
 //Funciones ejecutadas antes que llegen al servidor
-app.use(morgan("dev"))
-app.use(express.urlencoded({ extended: false }));
+// app.use(morgan("dev"))
+app.use(express.urlencoded({ extended: false })); ///para que entienda los datos de un formulario
+app.use(express.json());
 const storage = multer.diskStorage({
     destination: path.join(__dirname, "public/pdf/uploads"),
     filename: (req, file, cb, filename) => {
@@ -65,10 +66,10 @@ app.use((req, res, next) => {
 app.use(require('./routes/usuario'));
 app.use(require('./routes/articulo'));
 app.use(require('./routes/admin'));
+app.use(require('./routes/recuperarGmail'));
 
 //archivos estaticoss
 app.use(express.static(path.join(__dirname, 'public')));
-
 //inicar servidor o servidor escuchando
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'));
