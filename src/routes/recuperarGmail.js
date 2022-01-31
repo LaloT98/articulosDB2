@@ -10,8 +10,6 @@ const User = require('../models/User');
 router.post("/envia-correo", async(req, res) => {
     const { correo, CURP } = (req.body)
     usuario = await User.findOne({ correo: correo, CURP: CURP })
-    console.log("cORREO", usuario.correo, usuario.CURP)
-
 
 
     const OAuth2_client = new OAuth2(
